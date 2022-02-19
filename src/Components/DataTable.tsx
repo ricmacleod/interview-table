@@ -95,7 +95,12 @@ export default function DataTable(): JSX.Element {
         <h1 style={{ paddingTop: "20px" }}>
           {engageIDChange ? "IDs are Rotating" : "IDs are not Rotating"}
         </h1>
-        <TableContainer component={Paper}>
+        <TableContainer
+          component={Paper}
+          onClick={() =>
+            engageIDChange ? setEngageIDChange(false) : setEngageIDChange(true)
+          }
+        >
           <Table
             sx={{ minWidth: 650 }}
             aria-label="simple test table"
